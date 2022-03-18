@@ -1,0 +1,146 @@
+/* Global Selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-sarif";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.302), transparent),
+    url("../assets/img/background.png");
+
+  background-position: center;
+  background-size: cover;
+  padding: 0 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right;
+  padding-right: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.text-area {
+  color: white;
+  position: absolute;
+  bottom: 10%;
+}
+
+.text-area p {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.text-area h1 {
+  font-size: 200px;
+  line-height: 160px;
+  margin-left: -10px;
+  color: transparent;
+  /* Gives only stroke text */
+  -webkit-text-stroke: 1px white;
+
+  background: url(../assets/img/back.png);
+
+  /* Something like cliping path */
+  -webkit-background-clip: text;
+
+  background-position: 0 0;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.text-area h3 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.text-area .contact-area {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.text-area a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+}
+
+.text-area a span {
+  font-size: 30px;
+  line-height: 15px;
+  margin-left: 5px;
+}
+
+.social-icons {
+  position: absolute;
+  right: 5%;
+  bottom: 11%;
+}
+
+.social-icons img {
+  width: 25px;
+  display: block;
+  margin: 25px 5px;
+}
